@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>个人简历 — 张三</title>
+  <meta name="description" content="交互式个人简历 — 深色简洁风格，响应式，带滚动动画与悬停反馈。" />
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#">张三</a>
+      <button class="nav-toggle" aria-label="切换导航">☰</button>
+      <ul class="nav-list">
+        <li><a href="#about">关于</a></li>
+        <li><a href="#skills">技能</a></li>
+        <li><a href="#experience">工作经历</a></li>
+        <li><a href="#projects">项目</a></li>
+        <li><a href="#contact">联系方式</a></li>
+      </ul>
+    </nav>
+    <div class="hero container">
+      <div class="hero-left">
+        <h1 class="name">张三</h1>
+        <p class="title">前端开发工程师 · 交互 & 性能优化</p>
+        <p class="intro">专注于构建高性能、可访问且有设计感的 Web 应用。熟练掌握现代前端技术与工程化实践。</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">查看项目</a>
+          <a class="btn ghost" href="#contact">联系我</a>
+        </div>
+      </div>
+      <div class="hero-right" aria-hidden="true">
+        <div class="avatar-card">
+          <svg class="avatar" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#4f46e5" />
+                <stop offset="1" stop-color="#06b6d4" />
+              </linearGradient>
+            </defs>
+            <rect width="100" height="100" rx="12" fill="url(#g)" />
+            <circle cx="50" cy="38" r="16" fill="#fff" opacity="0.95" />
+            <rect x="18" y="62" width="64" height="18" rx="4" fill="#fff" opacity="0.95" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="panel container reveal">
+      <h2 class="panel-title">关于我</h2>
+      <div class="panel-body grid">
+        <div class="about-text">
+          <p>我有超过 5 年的前端开发经验，擅长将设计转化为高质量代码并关注用户体验、可访问性与性能优化。</p>
+          <ul>
+            <li>熟练：HTML、CSS、JavaScript、TypeScript、React</li>
+            <li>工具链：Vite、Webpack、ESLint、Prettier、Git</li>
+            <li>关注点：动画交互、页面性能、响应式布局与无障碍支持</li>
+          </ul>
+        </div>
+        <div class="about-stats">
+          <div class="stat">
+            <div class="num">5+</div>
+            <div class="label">年开发经验</div>
+          </div>
+          <div class="stat">
+            <div class="num">20+</div>
+            <div class="label">完成项目</div>
+          </div>
+          <div class="stat">
+            <div class="num">开源贡献</div>
+            <div class="label">若干</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="panel container reveal">
+      <h2 class="panel-title">技能特长</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>前端开发</h3>
+          <p>现代 JS、组件化、状态管理、SSR/SSG 与性能优化。</p>
+        </div>
+        <div class="skill-card">
+          <h3>交互设计</h3>
+          <p>动画、微交互、动效系统与 UX 思维。</p>
+        </div>
+        <div class="skill-card">
+          <h3>工程化</h3>
+          <p>构建工具、CI、代码质量与自动化测试。</p>
+        </div>
+        <div class="skill-card">
+          <h3>响应式 & 无障碍</h3>
+          <p>移动优先、ARIA 支持与键盘导航。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="panel container reveal">
+      <h2 class="panel-title">工作经历</h2>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="when">2022 - 现在</div>
+          <div class="what">
+            <h3>高级前端工程师 · 某科技公司</h3>
+            <p>负责核心产品前端架构、性能优化与前端模块化改造，带领小型团队交付多个关键功能。</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="when">2018 - 2022</div>
+          <div class="what">
+            <h3>前端工程师 · 另一个公司</h3>
+            <p>参与多个项目的开发与上线，提升页面首屏时间并改进用户交互体验。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="panel container reveal">
+      <h2 class="panel-title">项目展示</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-media" style="background-image:linear-gradient(120deg,#111827 0%,#0f172a 100%)">
+            <div class="project-overlay">
+              <h3>项目 A</h3>
+              <p>一个高性能的单页应用，包含复杂动画与微交互。</p>
+              <a class="project-link" href="#">查看项目</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media" style="background-image:linear-gradient(120deg,#0f172a 0%,#1f2937 100%)">
+            <div class="project-overlay">
+              <h3>项目 B</h3>
+              <p>组件库与设计系统，支持深色/浅色主题切换。</p>
+              <a class="project-link" href="#">查看项目</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media" style="background-image:linear-gradient(120deg,#1f2937 0%,#111827 100%)">
+            <div class="project-overlay">
+              <h3>开源贡献</h3>
+              <p>在若干开源项目中提交 PR，改善文档与性能。</p>
+              <a class="project-link" href="#">查看仓库</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="panel container reveal">
+      <h2 class="panel-title">联系方式</h2>
+      <div class="contact-grid">
+        <div>
+          <p>邮箱：<a href="mailto:zhangsan@example.com">zhangsan@example.com</a></p>
+          <p>电话：+86 138 0000 0000</p>
+          <p>GitHub：<a href="https://github.com/zhilong666">github.com/zhilong666</a></p>
+        </div>
+        <form class="contact-form" action="mailto:zhangsan@example.com" method="post" enctype="text/plain">
+          <label>
+            <span>称呼</span>
+            <input type="text" name="name" placeholder="您的称呼" required>
+          </label>
+          <label>
+            <span>邮件</span>
+            <input type="email" name="email" placeholder="您的邮箱" required>
+          </label>
+          <label>
+            <span>信息</span>
+            <textarea name="message" rows="4" placeholder="写点什么..." required></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn primary">发送</button>
+            <button type="reset" class="btn ghost">重置</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 张三 · 基于 GitHub Pages 部署</div>
+  </footer>
+
+  <script src="/js/script.js" defer></script>
+</body>
+</html>
