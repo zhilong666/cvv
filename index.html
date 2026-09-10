@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>个人简历 — 潘志龙</title>
-  <meta name="description" content="交互式个人简历 — 深色简洁风格，响应式，带滚动动画与悬停反馈。" />
+  <meta name="description" content="交互式个人简历 — 莫兰迪主色调，简洁响应式布局。" />
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -24,7 +24,7 @@
       <div class="hero-left">
         <h1 class="name">潘志龙</h1>
         <p class="title">前端开发工程师 · 交互 & 性能优化</p>
-        <p class="intro">专注于构建高性能、可访问且有设计感的 Web 应用。熟练掌握现代前端技术与工程化实践。</p>
+        <p class="intro">专注于构建高质量、可访问且有设计感的 Web 应用，熟悉现代前端技术与工程化实践。</p>
         <div class="hero-actions">
           <a class="btn primary" href="#projects">查看项目</a>
           <a class="btn ghost" href="#contact">联系我</a>
@@ -32,16 +32,17 @@
       </div>
       <div class="hero-right" aria-hidden="true">
         <div class="avatar-card">
-          <svg class="avatar" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <!-- 占位头像（将来可替换为上传的证件照） -->
+          <svg class="avatar" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="avatar">
             <defs>
               <linearGradient id="g" x1="0" x2="1">
-                <stop offset="0" stop-color="#4f46e5" />
-                <stop offset="1" stop-color="#06b6d4" />
+                <stop offset="0" stop-color="var(--accent-1)" />
+                <stop offset="1" stop-color="var(--accent-2)" />
               </linearGradient>
             </defs>
             <rect width="100" height="100" rx="12" fill="url(#g)" />
-            <circle cx="50" cy="38" r="16" fill="#fff" opacity="0.95" />
-            <rect x="18" y="62" width="64" height="18" rx="4" fill="#fff" opacity="0.95" />
+            <circle cx="50" cy="36" r="14" fill="#fff" opacity="0.95" />
+            <rect x="20" y="60" width="60" height="16" rx="4" fill="#fff" opacity="0.95" />
           </svg>
         </div>
       </div>
@@ -53,104 +54,128 @@
       <h2 class="panel-title">关于我</h2>
       <div class="panel-body grid">
         <div class="about-text">
-          <p>我有超过 5 年的前端开发经验，擅长将设计转化为高质量代码并关注用户体验、可访问性与性能优化。</p>
+          <p>我是一名数字媒体方向的本科生，擅长将设计转化为前端实现并关注交互、性能与可访问性。具有校园项目与短片拍摄、剪辑经验，熟悉多媒体工具链与三维制作基础。</p>
           <ul>
-            <li>熟练：HTML、CSS、JavaScript、TypeScript、React</li>
-            <li>工具链：Vite、Webpack、ESLint、Prettier、Git</li>
-            <li>关注点：动画交互、页面性能、响应式布局与无障碍支持</li>
+            <li>专业技能：HTML、CSS、JavaScript、TypeScript、React、动画交互</li>
+            <li>工具链：Photoshop、Premiere、Illustrator、Final Cut、3DMax、ZBrush</li>
+            <li>关注点：响应式布局、性能优化、交互设计与无障碍支持</li>
           </ul>
         </div>
-        <div class="about-stats">
+        <aside class="about-stats">
           <div class="stat">
-            <div class="num">5+</div>
-            <div class="label">年开发经验</div>
+            <div class="num">2001/10/1</div>
+            <div class="label">出生日期</div>
           </div>
           <div class="stat">
-            <div class="num">20+</div>
-            <div class="label">完成项目</div>
+            <div class="num">江西服装学院</div>
+            <div class="label">毕业学校</div>
           </div>
           <div class="stat">
-            <div class="num">开源贡献</div>
-            <div class="label">若干</div>
+            <div class="num">本科</div>
+            <div class="label">学历</div>
           </div>
-        </div>
+        </aside>
       </div>
     </section>
 
     <section id="skills" class="panel container reveal">
-      <h2 class="panel-title">技能特长</h2>
+      <h2 class="panel-title">技能与证书</h2>
       <div class="skills-grid">
         <div class="skill-card">
           <h3>前端开发</h3>
-          <p>现代 JS、组件化、状态管理、SSR/SSG 与性能优化。</p>
+          <p>现代 JS、组件化、状态管理、SSR/SSG、性能调优与工程化。</p>
         </div>
         <div class="skill-card">
-          <h3>交互设计</h3>
-          <p>动画、微交互、动效系统与 UX 思维。</p>
+          <h3>多媒体制作</h3>
+          <p>视频拍摄与剪辑、动效设计、三维建模与渲染。</p>
         </div>
         <div class="skill-card">
-          <h3>工程化</h3>
-          <p>构建工具、CI、代码质量与自动化测试。</p>
+          <h3>工具</h3>
+          <p>熟练：PS / PR / AI / Final Cut / 3DMax / ZBrush</p>
         </div>
         <div class="skill-card">
-          <h3>响应式 & 无障碍</h3>
-          <p>移动优先、ARIA 支持与键盘导航。</p>
+          <h3>证书</h3>
+          <p>普通话（二级甲等）、驾驶证、雅思 5.5</p>
         </div>
       </div>
     </section>
 
     <section id="experience" class="panel container reveal">
-      <h2 class="panel-title">工作经历</h2>
+      <h2 class="panel-title">校园经历</h2>
       <div class="timeline">
         <article class="timeline-item">
-          <div class="when">2022 - 现在</div>
+          <div class="when">2021.09.21 – 2021.10.19</div>
           <div class="what">
-            <h3>高级前端工程师 · 某科技公司</h3>
-            <p>负责核心产品前端架构、性能优化与前端模块化改造，带领小型团队交付多个关键功能。</p>
+            <h3>建校30周年校庆宣传片拍摄</h3>
+            <p>承担校庆宣传片的主要拍摄工作，负责现场拍摄与部分素材剪辑，与指导老师和团队协作完成宣传片制作。</p>
           </div>
         </article>
+
         <article class="timeline-item">
-          <div class="when">2018 - 2022</div>
+          <div class="when">2021.11 – 2021.12.05</div>
           <div class="what">
-            <h3>前端工程师 · 另一个公司</h3>
-            <p>参与多个项目的开发与上线，提升页面首屏时间并改进用户交互体验。</p>
+            <h3>志愿服务与合唱比赛</h3>
+            <p>参与学校志愿服务与活动拍摄，负责影像记录与后期整理。</p>
           </div>
         </article>
+
+        <article class="timeline-item">
+          <div class="when">2022.04 – 2022.12</div>
+          <div class="what">
+            <h3>校内外宣传项目</h3>
+            <p>参与学校教师工作室与地方景区的宣传片拍摄与制作，承担拍摄、剪辑与配合脚本执行工作。</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="when">2023.05.01</div>
+          <div class="what">
+            <h3>婚礼纪录片拍摄（定制）</h3>
+            <p>为新人定制婚礼纪录片，从采访、拍摄到剪辑负责全流程制作，积累活动拍摄经验。</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="when">2024.02.01</div>
+          <div class="what">
+            <h3>优秀实习生</h3>
+            <p>在校外实习期间表现优秀，参与美术与视频项目的制作与执行，获得导师肯定。</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="when">2025.06.07</div>
+          <div class="what">
+            <h3>南昌梅岭景区宣传片拍摄</h3>
+            <p>毕业前为景区拍摄宣传片，负责镜头拍摄与素材剪辑，展示景区风貌与项目成果。</p>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <section id="projects" class="panel container reveal">
-      <h2 class="panel-title">项目展示</h2>
-      <div class="projects-grid">
-        <article class="project-card">
-          <div class="project-media" style="background-image:linear-gradient(120deg,#111827 0%,#0f172a 100%)">
-            <div class="project-overlay">
-              <h3>项目 A</h3>
-              <p>一个高性能的单页应用，包含复杂动画与微交互。</p>
-              <a class="project-link" href="#">查看项目</a>
-            </div>
+    <section id="education" class="panel container reveal">
+      <h2 class="panel-title">教育 / 获奖</h2>
+      <div class="panel-body grid">
+        <div>
+          <h3>2020 – 2024 · 江西服装学院 · 本科</h3>
+          <p>数字媒体艺术（虚拟与现实展示设计）— 主修视觉设计、交互、三维与影像制作相关课程。</p>
+          <h4>获奖与展映</h4>
+          <ul>
+            <li>作品入选多项校内外展览与比赛并获奖与入围记录（图像、视频与交互类项目）。</li>
+            <li>参与跨校项目与线上展览，积累协作与项目推进经验。</li>
+          </ul>
+        </div>
+        <aside class="about-stats">
+          <div class="stat">
+            <div class="num">专业</div>
+            <div class="label">数字媒体艺术（虚拟与现实展示）</div>
           </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-media" style="background-image:linear-gradient(120deg,#0f172a 0%,#1f2937 100%)">
-            <div class="project-overlay">
-              <h3>项目 B</h3>
-              <p>组件库与设计系统，支持深色/浅色主题切换。</p>
-              <a class="project-link" href="#">查看项目</a>
-            </div>
+          <div class="stat">
+            <div class="num">政治面貌</div>
+            <div class="label">群众</div>
           </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-media" style="background-image:linear-gradient(120deg,#1f2937 0%,#111827 100%)">
-            <div class="project-overlay">
-              <h3>开源贡献</h3>
-              <p>在若干开源项目中提交 PR，改善文档与性能。</p>
-              <a class="project-link" href="#">查看仓库</a>
-            </div>
-          </div>
-        </article>
+        </aside>
       </div>
     </section>
 
@@ -158,11 +183,12 @@
       <h2 class="panel-title">联系方式</h2>
       <div class="contact-grid">
         <div>
-          <p>邮箱：<a href="mailto:zhangsan@example.com">zhangsan@example.com</a></p>
-          <p>电话：+86 138 0000 0000</p>
+          <p>手机：13006214364</p>
+          <p>邮箱：<a href="mailto:zhilongpan@ln.hk">zhilongpan@ln.hk</a></p>
+          <p>地址：江西省南昌市 · 江西服装学院</p>
           <p>GitHub：<a href="https://github.com/zhilong666">github.com/zhilong666</a></p>
         </div>
-        <form class="contact-form" action="mailto:zhangsan@example.com" method="post" enctype="text/plain">
+        <form class="contact-form" action="mailto:zhilongpan@ln.hk" method="post" enctype="text/plain">
           <label>
             <span>称呼</span>
             <input type="text" name="name" placeholder="您的称呼" required>
