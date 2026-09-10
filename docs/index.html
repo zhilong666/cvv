@@ -6,134 +6,217 @@
   <title>简历 — 潘志龙</title>
   <meta name="description" content="潘志龙 的个人简历" />
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/interaction.css">
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav container">
-      <a class="brand" href="#">简 历</a>
+    <nav class="nav">
+      <a class="brand" href="#">潘志龙</a>
+      <button class="nav-toggle" aria-label="切换导航">☰</button>
+      <ul class="nav-list">
+        <li><a href="#about">关于</a></li>
+        <li><a href="#skills">技能</a></li>
+        <li><a href="#experience">工作经历</a></li>
+        <li><a href="#projects">项目</a></li>
+        <li><a href="#contact">联系方式</a></li>
+      </ul>
     </nav>
+    <div class="hero container">
+      <div class="hero-left">
+        <h1 class="name">潘志龙</h1>
+        <p class="title">前端开发工程师 · 交互 & 性能优化</p>
+        <p class="intro">专注于构建高质量、可访问且有设计感的 Web 应用，熟悉现代前端技术与工程化实践。</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">查看项目</a>
+          <a class="btn ghost" href="#contact">联系我</a>
+        </div>
+      </div>
+      <div class="hero-right" aria-hidden="true">
+        <div class="avatar-card">
+          <!-- 占位头像（将来可替换为上传的证件照） -->
+          <svg class="avatar" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="avatar">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="var(--accent-1)" />
+                <stop offset="1" stop-color="var(--accent-2)" />
+              </linearGradient>
+            </defs>
+            <rect width="100" height="100" rx="12" fill="url(#g)" />
+            <circle cx="50" cy="36" r="14" fill="#fff" opacity="0.95" />
+            <rect x="20" y="60" width="60" height="16" rx="4" fill="#fff" opacity="0.95" />
+          </svg>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main class="container">
-    <div class="panel" style="display:grid;grid-template-columns:300px 1fr;gap:20px;align-items:start;">
-      <!-- 左侧窄栏 -->
-      <aside style="padding:18px;background:transparent;border-radius:8px;">
-        <div style="display:flex;flex-direction:column;align-items:center;gap:12px;margin-bottom:8px;">
-          <!-- 占位头像 -->
-          <div style="width:160px;height:200px;border-radius:6px;overflow:hidden;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;">
-            证件照
+  <main>
+    <section id="about" class="panel container reveal">
+      <h2 class="panel-title">关于我</h2>
+      <div class="panel-body grid">
+        <div class="about-text">
+          <p>我是一名数字媒体方向的本科生，擅长将设计转化为前端实现并关注交互、性能与可访问性。具有校园项目与短片拍摄、剪辑经验，熟悉多媒体工具链与三维制作基础。</p>
+          <ul>
+            <li>专业技能：HTML、CSS、JavaScript、TypeScript、React、动画交互</li>
+            <li>工具链：Photoshop、Premiere、Illustrator、Final Cut、3DMax、ZBrush</li>
+            <li>关注点：响应式布局、性能优化、交互设计与无障碍支持</li>
+          </ul>
+        </div>
+        <aside class="about-stats">
+          <div class="stat">
+            <div class="num">2001/10/1</div>
+            <div class="label">出生日期</div>
           </div>
-          <h2 style="margin:6px 0 0;color:var(--accent-1);">潘志龙</h2>
+          <div class="stat">
+            <div class="num">江西服装学院</div>
+            <div class="label">毕业学校</div>
+          </div>
+          <div class="stat">
+            <div class="num">本科</div>
+            <div class="label">学历</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="skills" class="panel container reveal">
+      <h2 class="panel-title">技能与证书</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>前端开发</h3>
+          <p>现代 JS、组件化、状态管理、SSR/SSG、性能调优与工程化。</p>
         </div>
-
-        <section style="margin-top:6px;">
-          <h3 style="margin:6px 0;color:var(--accent-1);">个人资料</h3>
-          <p><strong>出生：</strong>2001/10/1</p>
-          <p><strong>毕业学校：</strong>江西服装学院</p>
-          <p><strong>学历：</strong>本科</p>
-          <p><strong>政治面貌：</strong>群众</p>
-          <p><strong>专业：</strong>数字媒体艺术（虚拟与现实展示）</p>
-        </section>
-
-        <section style="margin-top:12px;">
-          <h3 style="margin:6px 0;color:var(--accent-1);">联系方式</h3>
-          <p><strong>手机：</strong>13006214364</p>
-          <p><strong>邮箱：</strong><a href="mailto:961888032@qq.com">961888032@qq.com</a></p>
-          <p><strong>地址：</strong>江西省南昌市 · 江西服装学院</p>
-          <p><strong>GitHub：</strong><a href="https://github.com/zhilong666">github.com/zhilong666</a></p>
-        </section>
-
-        <section style="margin-top:12px;">
-          <h3 style="margin:6px 0;color:var(--accent-1);">技能 / 证书</h3>
-          <ul>
-            <li>普通话水平证书（二级甲等）</li>
-            <li>驾驶证</li>
-            <li>熟练掌握：PS、PR、AI、Final Cut、3D Max、ZBrush 等软件</li>
-            <li>雅思 5.5</li>
-          </ul>
-        </section>
-      </aside>
-
-      <!-- 右侧主栏 -->
-      <section>
-        <h3 style="color:var(--accent-1);">校园经历</h3>
-
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="when">2021.09.21 - 2021.10.19</div>
-            <div class="what">
-              <h4>承担建校30周年校庆宣传片主要拍摄工作</h4>
-              <p>校内外宣传片拍摄。大二期间担任学校建校30周年庆的宣传片，锻炼了自己的专业能力以及与领导和老师之间的沟通能力。</p>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="when">2021.11 - 2021.12.05</div>
-            <div class="what">
-              <h4>志愿服务 / 合唱比赛</h4>
-              <p>参与志愿服务与活动拍摄，负责影像记录与后期整理。</p>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="when">2022.04 - 2022.12</div>
-            <div class="what">
-              <h4>校内外参与的项目</h4>
-              <p>参与市纪委宣传片拍摄，和北京银行宣传片剧本制作；大二期间参与学校教师工作室的后期制作工作，跟随指导老师参与多项校内外宣传项目。</p>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="when">2023.05.01</div>
-            <div class="what">
-              <h4>为聋哑人定制婚礼纪录片</h4>
-              <p>大三期间，帮助一对聋哑人策划并拍摄婚礼纪录片，全程负责策划、拍摄与剪辑，近距离尝试并练习与聋哑人交流。</p>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="when">2024.02.01</div>
-            <div class="what">
-              <h4>当选优秀实习生</h4>
-              <p>在深圳市海韵学校担任美术老师，积极完成校内教师工作，指导美术训练，带领学生参加比赛并获得全国书画大赛银奖。</p>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="when">2025.06.07</div>
-            <div class="what">
-              <h4>南昌梅岭景区宣传片拍摄</h4>
-              <p>毕业前为南昌梅岭景区拍摄宣传片，负责全程实拍与无人机航拍，并参与剪辑与后期制作，旨在展示景区风光并带动当地旅游经济。</p>
-            </div>
-          </article>
+        <div class="skill-card">
+          <h3>多媒体制作</h3>
+          <p>视频拍摄与剪辑、动效设计、三维建模与渲染。</p>
         </div>
+        <div class="skill-card">
+          <h3>工具</h3>
+          <p>熟练：PS / PR / AI / Final Cut / 3DMax / ZBrush</p>
+        </div>
+        <div class="skill-card">
+          <h3>证书</h3>
+          <p>普通话（二级甲等）、驾驶证、雅思 5.5</p>
+        </div>
+      </div>
+    </section>
 
-        <hr style="margin:18px 0;">
+    <section id="experience" class="panel container reveal">
+      <h2 class="panel-title">校园经历</h2>
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="when">2021.09.21 – 2021.10.19</div>
+          <div class="what">
+            <h3>建校30周年校庆宣传片拍摄</h3>
+            <p>承担校庆宣传片的主要拍摄工作，负责现场拍摄与部分素材剪辑，与指导老师和团队协作完成宣传片制作。</p>
+          </div>
+        </article>
 
-        <h3 style="color:var(--accent-1);">教育层次 / 获奖</h3>
+        <article class="timeline-item reveal">
+          <div class="when">2021.11 – 2021.12.05</div>
+          <div class="what">
+            <h3>志愿服务与合唱比赛</h3>
+            <p>参与学校志愿服务与活动拍摄，负责影像记录与后期整理。</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="when">2022.04 – 2022.12</div>
+          <div class="what">
+            <h3>校内外宣传项目</h3>
+            <p>参与学校教师工作室与地方景区的宣传片拍摄与制作，承担拍摄、剪辑与配合脚本执行工作。</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="when">2023.05.01</div>
+          <div class="what">
+            <h3>婚礼纪录片拍摄（定制）</h3>
+            <p>为新人定制婚礼纪录片，从采访、拍摄到剪辑负责全流程制作，积累活动拍摄经验。</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="when">2024.02.01</div>
+          <div class="what">
+            <h3>优秀实习生</h3>
+            <p>在校外实习期间表现优秀，参与美术与视频项目的制作与执行，获得导师肯定。</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="when">2025.06.07</div>
+          <div class="what">
+            <h3>南昌梅岭景区宣传片拍摄</h3>
+            <p>毕业前为景区拍摄宣传片，负责镜头拍摄与素材剪辑，展示景区风貌与项目成果。</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="education" class="panel container reveal">
+      <h2 class="panel-title">教育 / 获奖</h2>
+      <div class="panel-body grid reveal">
         <div>
-          <p><strong>2020 - 2024</strong> 江西服装学院 · 本科（数字媒体艺术（虚拟与现实展示设计））</p>
-          <p>主修课程：设计素描、设计色彩、平面构成、中外经典设计创意思维与表现、视听语言、设计概论、装饰与图案、立体构成、中外设计艺术史、泥塑造型、数字绘画、版式设计等。</p>
-
-          <h4>获奖情况</h4>
+          <h3>2020 – 2024 · 江西服装学院 · 本科</h3>
+          <p>数字媒体艺术（虚拟与现实展示设计）— 主修视觉设计、交互、三维与影像制作相关课程。</p>
+          <h4>获奖与展映</h4>
           <ul>
-            <li>作品《咆哮》入选“香港当代设计奖” 铜奖</li>
-            <li>作品《一话一世界》入选“香港当代设计奖” 银奖</li>
-            <li>作品《伪》入选“第三届伦敦中华艺术交流展” 全球银奖</li>
-            <li>作品《人间》入选“亚太视觉艺术交流展”</li>
-            <li>作品《量》入围“北美应用艺术设计大赛”</li>
-            <li>作品《道法自然》入围“G-CROSS全球大学生创意奖” 全球铜奖</li>
-            <li>作品《归途》入围第四届东方创意之星影视艺术类 金奖</li>
+            <li>作品入选多项校内外展览与比赛并获奖与入围记录（图像、视频与交互类项目）。</li>
+            <li>参与跨校项目与线上展览，积累协作与项目推进经验。</li>
           </ul>
-
-          <p><strong>其他：</strong>雅思 5.5</p>
         </div>
-      </section>
-    </div>
+        <aside class="about-stats">
+          <div class="stat">
+            <div class="num">专业</div>
+            <div class="label">数字媒体艺术（虚拟与现实展示）</div>
+          </div>
+          <div class="stat">
+            <div class="num">政治面貌</div>
+            <div class="label">群众</div>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-    <footer class="site-footer" style="margin-top:20px;padding:12px 0;text-align:center;color:var(--muted);">© 2026 潘志龙 · 基于 GitHub Pages 部署</footer>
+    <section id="contact" class="panel container reveal">
+      <h2 class="panel-title">联系方式</h2>
+      <div class="contact-grid">
+        <div>
+          <p>手机：13006214364</p>
+          <p>邮箱：<a href="mailto:zhilongpan@ln.hk">zhilongpan@ln.hk</a></p>
+          <p>地址：江西省南昌市 · 江西服装学院</p>
+          <p>GitHub：<a href="https://github.com/zhilong666">github.com/zhilong666</a></p>
+        </div>
+        <form class="contact-form" action="mailto:zhilongpan@ln.hk" method="post" enctype="text/plain">
+          <label>
+            <span>称呼</span>
+            <input type="text" name="name" placeholder="您的称呼" required>
+          </label>
+          <label>
+            <span>邮件</span>
+            <input type="email" name="email" placeholder="您的邮箱" required>
+          </label>
+          <label>
+            <span>信息</span>
+            <textarea name="message" rows="4" placeholder="写点什么..." required></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn primary">发送</button>
+            <button type="reset" class="btn ghost">重置</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
   </main>
 
+  <footer class="site-footer">
+    <div class="container">© 2026 潘志龙 · 基于 GitHub Pages 部署</div>
+  </footer>
+
   <script src="js/script.js" defer></script>
+  <script src="js/interaction.js" defer></script>
 </body>
 </html>

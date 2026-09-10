@@ -1,0 +1,14 @@
+/* interaction.css v1.1 (docs copy) */
+:root{
+  --interaction-transition: cubic-bezier(.2,.9,.3,1);
+}
+.btn{ transition: transform 200ms var(--interaction-transition), box-shadow 200ms var(--interaction-transition), opacity 160ms; }
+.btn:hover{ transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+.btn:active{ transform: translateY(1px) scale(.998); }
+.reveal{ opacity:0; transform: translateY(12px); transition: opacity 520ms var(--interaction-transition), transform 520ms var(--interaction-transition); }
+.reveal.visible{ opacity:1; transform:none; }
+.timeline-item{ opacity:0; transform: translateY(8px); transition: opacity 420ms var(--interaction-transition), transform 420ms var(--interaction-transition); }
+.timeline-item.visible{ opacity:1; transform:none; }
+.timeline-item:hover{ transform: translateY(-6px); box-shadow: 0 12px 24px rgba(11,10,9,0.04); }
+:focus{ outline-offset:3px; outline:3px solid rgba(79,70,229,0.12); border-radius:6px; }
+@media (prefers-reduced-motion: reduce){ *{ transition:none !important; animation:none !important; } }
