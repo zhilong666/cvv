@@ -3,139 +3,39 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>简历 — 潘志龙</title>
-  <meta name="description" content="潘志龙 的个人简历" />
+  <title>潘志龙 / 独立设计与前端开发</title>
+  <meta name="description" content="潘志龙的个人作品集：品牌体验、数字产品与前端开发。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/interaction.css">
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav container">
-      <a class="brand" href="#">简 历</a>
+    <nav class="nav container" aria-label="主导航">
+      <a class="brand" href="#top"><span>PL</span> / portfolio</a>
+      <button class="nav-toggle" aria-label="打开导航" aria-expanded="false">菜单</button>
+      <ul class="nav-list">
+        <li><a href="#about">关于</a></li><li><a href="#projects">作品</a></li><li><a href="#resume">履历</a></li><li><a class="nav-contact" href="#contact">联系 <span>↗</span></a></li>
+      </ul>
     </nav>
   </header>
 
-  <main class="container">
-    <div class="panel reveal" style="display:grid;grid-template-columns:300px 1fr;gap:20px;align-items:start;">
-      <!-- 左侧窄栏 -->
-      <aside style="padding:18px;background:transparent;border-radius:8px;">
-        <div style="display:flex;flex-direction:column;align-items:center;gap:12px;margin-bottom:8px;">
-          <!-- 占位头像 -->
-          <div style="width:160px;height:200px;border-radius:6px;overflow:hidden;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;">
-            证件照
-          </div>
-          <h2 style="margin:6px 0 0;color:var(--accent-1);">潘志龙</h2>
-        </div>
+  <main id="top">
+    <section class="hero container reveal">
+      <div class="hero-copy"><p class="eyebrow" data-profile="availability"></p><h1 data-profile="name"></h1><p class="hero-role" data-profile="role"></p><p class="hero-intro" data-profile="intro"></p><div class="hero-actions"><a class="button button-dark" href="#projects">浏览作品 <span>↓</span></a><a class="text-link" href="#contact">一起做点有意思的事 <span>↗</span></a></div></div>
+      <div class="hero-mark" aria-label="个人标识"><span>PZL</span><i></i></div><div class="hero-meta"><span>Based in Shanghai</span><span>Available for select projects</span></div>
+    </section>
 
-        <section style="margin-top:6px;" class="reveal">
-          <h3 style="margin:6px 0;color:var(--accent-1);">个人资料</h3>
-          <p><strong>出生：</strong>2001/10/1</p>
-          <p><strong>毕业学校：</strong>江西服装学院</p>
-          <p><strong>学历：</strong>本科</p>
-          <p><strong>政治面貌：</strong>群众</p>
-          <p><strong>专业：</strong>数字媒体艺术（虚拟与现实展示）</p>
-        </section>
-
-        <section style="margin-top:12px;" class="reveal">
-          <h3 style="margin:6px 0;color:var(--accent-1);">联系方式</h3>
-          <p><strong>手机：</strong>13006214364</p>
-          <p><strong>邮箱：</strong><a href="mailto:961888032@qq.com">961888032@qq.com</a></p>
-          <p><strong>地址：</strong>江西省南昌市 · 江西服装学院</p>
-          <p><strong>GitHub：</strong><a href="https://github.com/zhilong666">github.com/zhilong666</a></p>
-        </section>
-
-        <section style="margin-top:12px;" class="reveal">
-          <h3 style="margin:6px 0;color:var(--accent-1);">技能 / 证书</h3>
-          <ul>
-            <li>普通话水平证书（二级甲等）</li>
-            <li>驾驶证</li>
-            <li>熟练掌握：PS、PR、AI、Final Cut、3D Max、ZBrush 等软件</li>
-            <li>雅思 5.5</li>
-          </ul>
-        </section>
-      </aside>
-
-      <!-- 右侧主栏 -->
-      <section>
-        <h3 style="color:var(--accent-1);" class="reveal">校园经历</h3>
-
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <div class="when">2021.09.21 - 2021.10.19</div>
-            <div class="what">
-              <h4>承担建校30周年校庆宣传片主要拍摄工作</h4>
-              <p>校内外宣传片拍摄。大二期间担任学校建校30周年庆的宣传片，锻炼了自己的专业能力以及与领导和老师之间的沟通能力。</p>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="when">2021.11 - 2021.12.05</div>
-            <div class="what">
-              <h4>志愿服务 / 合唱比赛</h4>
-              <p>参与志愿服务与活动拍摄，负责影像记录与后期整理。</p>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="when">2022.04 - 2022.12</div>
-            <div class="what">
-              <h4>校内外参与的项目</h4>
-              <p>参与市纪委宣传片拍摄，和北京银行宣传片剧本制作；大二期间参与学校教师工作室的后期制作工作，跟随指导老师参与多项校内外宣传项目。</p>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="when">2023.05.01</div>
-            <div class="what">
-              <h4>为聋哑人定制婚礼纪录片</h4>
-              <p>大三期间，帮助一对聋哑人策划并拍摄婚礼纪录片，全程负责策划、拍摄与剪辑，近距离尝试并练习与聋哑人交流。</p>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="when">2024.02.01</div>
-            <div class="what">
-              <h4>当选优秀实习生</h4>
-              <p>在深圳市海韵学校担任美术老师，积极完成校内教师工作，指导美术训练，带领学生参加比赛并获得全国书画大赛银奖。</p>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="when">2025.06.07</div>
-            <div class="what">
-              <h4>南昌梅岭景区宣传片拍摄</h4>
-              <p>毕业前为南昌梅岭景区拍摄宣传片，负责全程实拍与无人机航拍，并参与剪辑与后期制作，旨在展示景区风光并带动当地旅游经济。</p>
-            </div>
-          </article>
-        </div>
-
-        <hr style="margin:18px 0;">
-
-        <h3 style="color:var(--accent-1);" class="reveal">教育层次 / 获奖</h3>
-        <div class="reveal">
-          <p><strong>2020 - 2024</strong> 江西服装学院 · 本科（数字媒体艺术（虚拟与现实展示设计））</p>
-          <p>主修课程：设计素描、设计色彩、平面构成、中外经典设计创意思维与表现、视听语言、设计概论、装饰与图案、立体构成、中外设计艺术史、泥塑造型、数字绘画、版式设计等。</p>
-
-          <h4>获奖情况</h4>
-          <ul>
-            <li>作品《咆哮》入选“香港当代设计奖” 铜奖</li>
-            <li>作品《一话一世界》入选“香港当代设计奖” 银奖</li>
-            <li>作品《伪》入选“第三届伦敦中华艺术交流展” 全球银奖</li>
-            <li>作品《人间》入选“亚太视觉艺术交流展”</li>
-            <li>作品《量》入围“北美应用艺术设计大赛”</li>
-            <li>作品《道法自然》入围“G-CROSS全球大学生创意奖” 全球铜奖</li>
-            <li>作品《归途》入围第四届东方创意之星影视艺术类 金奖</li>
-          </ul>
-
-          <p><strong>其他：</strong>雅思 5.5</p>
-        </div>
-      </section>
-    </div>
-
-    <footer class="site-footer" style="margin-top:20px;padding:12px 0;text-align:center;color:var(--muted);">© 2026 潘志龙 · 基于 GitHub Pages 部署</footer>
+    <section id="about" class="section container reveal"><div class="section-label"><span>01</span><span>About</span></div><div class="section-content about-layout"><h2 data-profile="statement"></h2><div class="about-side"><p data-profile="bio"></p><a class="text-link" href="#resume">查看完整履历 <span>↗</span></a></div></div></section>
+    <section id="projects" class="section container reveal"><div class="section-label"><span>02</span><span>Selected work</span></div><div class="section-content"><div class="project-toolbar"><p class="section-heading">最近的工作</p><div class="filters" role="group" aria-label="项目筛选"></div></div><div class="projects-grid"></div></div></section>
+    <section id="resume" class="section container reveal"><div class="section-label"><span>03</span><span>Resume</span></div><div class="section-content resume-layout"><div><p class="section-heading">工作经历</p><div class="experience-list"></div></div><div><p class="section-heading">能力与工具</p><div class="skills-list"></div></div></div></section>
+    <section id="contact" class="contact-section container reveal"><div><p class="eyebrow">有项目想法？</p><h2>让我们聊聊<br><em>下一件作品。</em></h2></div><div class="contact-details"><a class="contact-email" data-profile="email"></a><p data-profile="contactNote"></p><a class="button button-light" data-profile-link="github" target="_blank" rel="noreferrer">Github <span>↗</span></a></div></section>
   </main>
 
+  <footer class="site-footer container"><span>© 2026 <span data-profile="name"></span></span><span>Built with intention.</span></footer>
+
+  <script src="js/data.js"></script>
   <script src="js/script.js" defer></script>
-  <script src="js/interaction.js" defer></script>
 </body>
 </html>

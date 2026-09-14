@@ -1,51 +1,18 @@
-// 简单导航切换与 reveal 动画（增强版）
-// 现在同时监听 .reveal 与 .timeline-item，timeline 项目会有小延迟的入场动画
-document.addEventListener('DOMContentLoaded', function () {
-  // nav toggle (移动端)
-  const toggle = document.querySelector('.nav-toggle');
-  const navList = document.querySelector('.nav-list');
-  if (toggle && navList) {
-    toggle.addEventListener('click', () => navList.classList.toggle('open'));
-  }
-
-  // reveal on scroll: observe both .reveal and .timeline-item
-  const selector = '.reveal, .timeline-item';
-  const reveals = document.querySelectorAll(selector);
-
-  if ('IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-
-          // stagger timeline items slightly based on their index for nicer effect
-          if (el.classList.contains('timeline-item')) {
-            const items = Array.from(document.querySelectorAll('.timeline-item'));
-            const idx = items.indexOf(el);
-            const delay = Math.min(6, idx) * 80; // max small delay
-            el.style.transitionDelay = delay + 'ms';
-          }
-
-          el.classList.add('visible');
-          io.unobserve(el);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    reveals.forEach(r => io.observe(r));
-  } else {
-    // fallback: just show everything
-    reveals.forEach(r => r.classList.add('visible'));
-  }
-
-  // Accessibility: allow Space/Enter to toggle nav on small screens when focused on the toggle
-  if (toggle) {
-    toggle.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        navList.classList.toggle('open');
-      }
-    });
-  }
-
+document.addEventListener('DOMContentLoaded', () => {
+  const data = window.portfolioData;
+  const $ = (selector, parent = document) => parent.querySelector(selector);
+  const $$ = (selector, parent = document) => [...parent.querySelectorAll(selector)];
+  $$('[data-profile]').forEach((element) => { const value = data.profile[element.dataset.profile]; if (value) element.textContent = value; });
+  $$('[data-profile-link]').forEach((element) => { const value = data.profile[element.dataset.profileLink]; if (value) element.href = value; });
+  $('[data-profile="email"]').href = `mailto:${data.profile.email}`;
+  const filters = $('.filters'); const projectsGrid = $('.projects-grid'); let activeCategory = '全部';
+  function renderFilters() { filters.innerHTML = data.categories.map((category) => `<button class="filter ${category === activeCategory ? 'active' : ''}" data-category="${category}">${category}</button>`).join(''); $$('.filter', filters).forEach((button) => button.addEventListener('click', () => { activeCategory = button.dataset.category; renderFilters(); renderProjects(); })); }
+  function renderProjects() { const projects = activeCategory === '全部' ? data.projects : data.projects.filter((project) => project.category === activeCategory); projectsGrid.innerHTML = projects.map((project, index) => `<article class="project-card project-${project.color}" style="--delay:${index * 80}ms"><a href="${project.link}" class="project-visual" aria-label="查看 ${project.title}"><span class="project-index">0${index + 1}</span><span class="project-shape"></span><span class="project-arrow">↗</span></a><div class="project-info"><div><p class="project-category">${project.category} / ${project.year}</p><h3>${project.title}</h3></div><p>${project.description}</p><div class="project-tags">${project.tags.map((tag) => `<span>${tag}</span>`).join('')}</div></div></article>`).join(''); }
+  $('.experience-list').innerHTML = data.experience.map((item) => `<article class="experience-item"><p class="experience-period">${item.period}</p><div><h3>${item.role}</h3><p class="experience-company">${item.company}</p><p>${item.detail}</p></div></article>`).join('');
+  $('.skills-list').innerHTML = data.skills.map((skill, index) => `<span><b>0${index + 1}</b>${skill}</span>`).join(''); renderFilters(); renderProjects();
+  const toggle = $('.nav-toggle'); const nav = $('.nav-list');
+  toggle.addEventListener('click', () => { const open = nav.classList.toggle('open'); toggle.setAttribute('aria-expanded', open); });
+  $$('.nav-list a').forEach((link) => link.addEventListener('click', () => nav.classList.remove('open')));
+  const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }), { threshold: 0.12 });
+  $$('.reveal').forEach((element) => observer.observe(element));
 });
