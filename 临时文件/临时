@@ -1,0 +1,11 @@
+{
+  name,          // 姓名
+  availability,  // 当前身份
+  role,          // 核心定位
+  intro,         // 首屏简介
+  statement,     // 关于我主标题
+  bio,           // 详细介绍
+  email,         // 邮箱
+  github,        // GitHub 地址
+  contactNote    // 联系区域说明
+}

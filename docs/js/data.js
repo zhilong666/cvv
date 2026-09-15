@@ -8,7 +8,7 @@ window.portfolioData = {
     { title: 'Still / Moving', category: '品牌体验', year: '2023', description: '为独立影像工作室设计的作品集，强调节奏、留白和观看感。', tags: ['Art direction', 'Web design'], color: 'orange', link: '#' }
   ],
   experience: [
-    { period: '2022 — 至今', role: '独立设计师 / 开发者', company: '上海 · 自由职业', detail: '为品牌、产品团队和文化机构提供从概念到上线的设计与开发服务。' },
+    { period: '2021.09 — 2021.10', role: '导演/ 宣传片', company: '上海 · 自由职业', detail: 为学校70周年校庆拍摄宣传片。' },
     { period: '2019 — 2022', role: '高级前端工程师', company: '像素制造局', detail: '负责数字产品体验与前端架构，协作完成 20+ 个品牌和产品项目。' },
     { period: '2017 — 2019', role: '前端工程师', company: '另一个好团队', detail: '从事响应式网站、组件系统与动效交互的设计开发。' }
   ],
